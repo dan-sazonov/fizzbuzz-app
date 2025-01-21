@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>FizzBuzz App</title>
+</head>
+<body>
+<h1>FizzBuzz Checker</h1>
+<form action="/check" method="post">
+    <label for="number">Enter a number:</label>
+    <input type="number" id="number" name="number" required>
+    <button type="submit">Check</button>
+</form>
+
+<div>
+    <h2>Result:</h2>
+    <p th:if="${result}" th:text="${result}"></p>
+</div>
+</body>
+</html>
